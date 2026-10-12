@@ -33,3 +33,6 @@ docs/brief/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Local data
+students.json
