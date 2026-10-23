@@ -74,6 +74,17 @@ dotnet test StudentCli.slnx
 
 See [docs/ROADMAP.md](docs/ROADMAP.md).
 
+## Background
+
+This project started as a bootcamp project and was later rebuilt from the ground up. The original was a .NET 7 console app with everything in `Program.cs` and the student list kept in memory. What this version adds:
+
+- **Structure:** `Program.cs` only starts the app; the menu is in `ConsoleUi`, the rules in `StudentService` and the storage in `JsonStudentRepository`.
+- **Data:** students saved to `students.json` with atomic writes; sample students only on the first run.
+- **Features:** search and update, Turkish-aware name casing, and confirmations before changes.
+- **Robust input:** numbers parsed safely, and blank input cancels instead of crashing.
+- **Output:** colour-coded, box-drawn tables from a small `ConsoleTable` class, with no third-party packages.
+- **Quality:** xUnit tests, .NET 10 with warnings as errors, and CI on every pull request.
+
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) · Berat Oğuzhan Turğut · [GitHub](https://github.com/Beratoguzhan620)

@@ -74,6 +74,17 @@ dotnet test StudentCli.slnx
 
 [docs/ROADMAP.md](docs/ROADMAP.md)
 
+## Arka plan
+
+Bu proje bir bootcamp projesi olarak başladı, sonra baştan geliştirildi. İlk hali, her şeyin `Program.cs` içinde olduğu ve öğrenci listesinin bellekte tutulduğu bir .NET 7 konsol uygulamasıydı. Bu sürümde eklenenler:
+
+- **Yapı:** `Program.cs` yalnızca uygulamayı başlatıyor; menü `ConsoleUi`'da, kurallar `StudentService`'te, kayıt işleri `JsonStudentRepository`'de.
+- **Veri:** öğrenciler `students.json` dosyasına güvenli (atomik) yazmayla kaydediliyor; örnek öğrenciler yalnızca ilk açılışta.
+- **Özellikler:** arama ve güncelleme, Türkçe kurallara uygun ad düzeltme, değişikliklerden önce onay.
+- **Sağlam giriş:** sayılar güvenle ayrıştırılıyor; boş giriş çökme yerine işlemi iptal ediyor.
+- **Çıktı:** harici paket kullanmadan, küçük bir `ConsoleTable` sınıfıyla renkli ve çerçeveli tablolar.
+- **Kalite:** xUnit testleri, uyarıların hata sayıldığı .NET 10 ve her pull request'te CI.
+
 ## Lisans
 
-[MIT](LICENSE)
+[MIT](LICENSE) · Berat Oğuzhan Turğut · [GitHub](https://github.com/Beratoguzhan620)
